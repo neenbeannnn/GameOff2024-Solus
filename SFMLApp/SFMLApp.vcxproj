@@ -24,6 +24,7 @@
     <ProjectGuid>{40bc8f66-2a9a-44fe-8c50-350bb72b792b}</ProjectGuid>
     <RootNamespace>SFMLApp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>GameOff2024</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -133,7 +134,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Animations.cpp" />
+    <ClCompile Include="Collisions.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="HelperFunctions.cpp" />
+    <ClCompile Include="KeyboardControl.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="Player.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Animations.h" />
+    <ClInclude Include="Collisions.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="HelperFunctions.h" />
+    <ClInclude Include="KeyboardControl.h" />
+    <ClInclude Include="NPC.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

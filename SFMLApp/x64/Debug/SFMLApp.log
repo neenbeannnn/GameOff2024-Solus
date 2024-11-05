@@ -1,2 +1,11 @@
-﻿  main.cpp
-LINK : fatal error LNK1104: cannot open file 'smfl-graphics-d.lib'
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (SFMLApp.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Animations.cpp
+  Collisions.cpp
+  Game.cpp
+  HelperFunctions.cpp
+  KeyboardControl.cpp
+  main.cpp
+  NPC.cpp
+  Player.cpp
+  Generating Code...
+  SFMLApp.vcxproj -> C:\Users\nina\source\repos\SFMLApp\x64\Debug\GameOff2024.exe
