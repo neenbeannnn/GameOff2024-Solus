@@ -4,10 +4,9 @@ int main()
 {
     sf::Texture texture;
 
-
     if (!texture.loadFromFile("gato.png", sf::IntRect(0, 0, 32, 32)))
     {
-        // error...
+        //
     }
     sf::Sprite sprite(texture);
     sprite.setPosition(sf::Vector2f(100.0f, 100.0f));
