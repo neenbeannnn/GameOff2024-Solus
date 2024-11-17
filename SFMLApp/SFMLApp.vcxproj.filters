@@ -74,5 +74,13 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TileMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="..\..\..\..\Downloads\Arial.ttf">
+      <Filter>Resource Files\fonts</Filter>
+    </Font>
   </ItemGroup>
 </Project>
