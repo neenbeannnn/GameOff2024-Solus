@@ -172,8 +172,8 @@ C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(100,65): warning C4244
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(100,47): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
   (compiling source file 'main.cpp')
   
-C:\Users\rapha\source\repos\GameOff2024\SFMLApp\main.cpp(13,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\rapha\source\repos\GameOff2024\SFMLApp\main.cpp(14,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\rapha\source\repos\GameOff2024\SFMLApp\main.cpp(15,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\rapha\source\repos\GameOff2024\SFMLApp\main.cpp(16,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\main.cpp(15,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\main.cpp(16,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\main.cpp(17,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\main.cpp(18,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   SFMLApp.vcxproj -> C:\Users\rapha\Source\Repos\GameOff2024\x64\Debug\GameOff2024.exe
