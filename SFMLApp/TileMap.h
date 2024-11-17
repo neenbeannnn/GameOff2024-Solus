@@ -57,7 +57,7 @@ public:
             return true; // Out of bounds is considered solid
 
         int tileNumber = m_tiles[x + y * m_width];
-        return tileNumber == 2; // Only tile 2 is considered solid
+        return tileNumber == 22 || tileNumber == 23 || tileNumber == 54 || tileNumber == 55; // Only tiles 22, 23, 54, and 55 are considered solid
     }
 
     sf::Vector2u getTileSize() const { return m_tileSize; }
@@ -116,6 +116,10 @@ private:
 };
 
 #endif // TILEMAP_H
+
+
+
+
 
 
 

@@ -136,6 +136,7 @@
   <ItemGroup>
     <ClCompile Include="Animations.cpp" />
     <ClCompile Include="Collisions.cpp" />
+    <ClCompile Include="DialogueBox.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HelperFunctions.cpp" />
     <ClCompile Include="KeyboardControl.cpp" />
@@ -146,6 +147,7 @@
   <ItemGroup>
     <ClInclude Include="Animations.h" />
     <ClInclude Include="Collisions.h" />
+    <ClInclude Include="DialogueBox.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="HelperFunctions.h" />
     <ClInclude Include="KeyboardControl.h" />
