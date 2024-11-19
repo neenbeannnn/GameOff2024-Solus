@@ -27,7 +27,7 @@ int main()
 	* Gamers I don't know what I should put for the loadFromFile once I push this
 	* I can't start from repo bc it won't find it (despite it being in the repo)
 	*/
-	if (!arial.loadFromFile("GameOff2024\\arial.ttf")) {
+	if (!arial.loadFromFile("C:\\Users\\Ghoul\\source\\repos\\GameOff2024\\arial.ttf")) {
 		std::cerr << "Can't find the font" << std::endl;
 	}
 	testDialogue.setFont(arial);

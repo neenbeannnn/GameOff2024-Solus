@@ -77,9 +77,12 @@ void DialogueBox::pressEToContinue(sf::Keyboard::Key key, bool isPressed)
 	{
 		visible = !visible;
 		if (timesChanged < dialogueHolder.size()) {
-			text.setString(dialogueHolder[timesChanged]);
-			std::cout << dialogueHolder[timesChanged];
-			timesChanged++;
+			if (visible) 
+			{
+				text.setString(dialogueHolder[timesChanged]);
+				std::cout << dialogueHolder[timesChanged];
+				timesChanged++;
+			}
 		}
 	}
 }
