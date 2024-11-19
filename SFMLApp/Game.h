@@ -1,6 +1,9 @@
 #pragma once
-#include <vector>
 #include <SFML/Graphics.hpp>
+#include "TileMap.h"
+#include "DialogueBox.h"
+#include "Player.h"
+#include "Movement.h"
 
 class Game
 {
@@ -13,7 +16,18 @@ private:
     void processEvents();
     void update(sf::Time deltaTime);
     void render();
+    void initWindow();
+    void initView();
+    void initTileMap();
+    void initPlayer();
+    void initDialogueBox();
 
     sf::RenderWindow window;
-    sf::Time dt;
+    sf::View view;
+    TileMap map;
+    Player player;
+    Movement movement;
+    DialogueBox dialogueBox; // Use a member variable for the dialogue box
+    bool showDialogue;
 };
+

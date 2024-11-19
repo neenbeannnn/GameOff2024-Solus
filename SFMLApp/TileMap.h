@@ -116,10 +116,3 @@ private:
 };
 
 #endif // TILEMAP_H
-
-
-
-
-
-
-

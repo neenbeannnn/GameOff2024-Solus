@@ -141,6 +141,7 @@
     <ClCompile Include="HelperFunctions.cpp" />
     <ClCompile Include="KeyboardControl.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Movement.cpp" />
     <ClCompile Include="NPC.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
@@ -151,6 +152,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="HelperFunctions.h" />
     <ClInclude Include="KeyboardControl.h" />
+    <ClInclude Include="Movement.h" />
     <ClInclude Include="NPC.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="resource.h" />
