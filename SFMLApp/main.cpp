@@ -29,7 +29,7 @@ int main()
 
     };
 
-    map.load("APT_TILEMAP.png", sf::Vector2u(32, 32), level, 15, 10);
+    map.load("tilemaps/APT_TILEMAP.png", sf::Vector2u(32, 32), level, 15, 10);
     map.setScale(4.0f, 4.0f); // Scale up the tile map
     map.setDebugDrawing(true); // Enable debug drawing
 
