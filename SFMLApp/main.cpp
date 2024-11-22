@@ -73,7 +73,7 @@ int main()
     view.setCenter(sprite.getPosition());
     window.setView(view);
 
-    const float movementSpeed = 0.1f; // Movement speed
+    const float movementSpeed = 0.3f; // Movement speed
 
     while (window.isOpen())
     {
@@ -103,12 +103,6 @@ int main()
             if (map->handleCollision(newPosition, movement)) {
                 sprite.move(movement);
             }
-
-            /*Collisions collisions;
-
-            if (!collisions.checkCollisionApartmentFirstFloor(newPosition.x, newPosition.y, 15, 32)) {
-                sprite.move(movement);
-            }*/
 
             sf::RectangleShape debugCollisionBox(sf::Vector2f(32, 32));
             debugCollisionBox.setPosition(newPosition.x, newPosition.y);

@@ -2,7 +2,7 @@
 
 
 Collisions::Collisions(std::vector<int> collisions) {
-    this->collisionLayer = collisions.data();
+    this->collisionLayer = collisions;
 }
 
 bool Collisions::checkCollision(float x, float y, int mapWidth, int tileSize) {
@@ -14,7 +14,7 @@ bool Collisions::checkCollision(float x, float y, int mapWidth, int tileSize) {
     //cout << "x: " << tileX << " y: " << tileY << " mapWidth: " << mapWidth << " tileSize: " << tileSize << endl;
     if (tileX >= 0 && tileX < mapWidth && tileY >= 0) {
         int index = tileY * mapWidth + tileX;
-        return collisionLayer[index] == 1;
+        return this->collisionLayer[index] == 1;
     }
     return false;
 }

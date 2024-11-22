@@ -15,7 +15,7 @@ public:
 
 	bool checkCollision(float x, float y, int mapWidth, int tileSize);
 private:
-	int* collisionLayer;
+	std::vector<int> collisionLayer;
 };
 
 #endif
