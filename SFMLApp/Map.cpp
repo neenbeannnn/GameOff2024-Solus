@@ -9,6 +9,7 @@ Map::Map(pair<float, float> spawnPoints, std::string tileset, int tileSize, int 
 	//Flatten the 2D array into a 1D vector
 	this->tiles = tiles;
 	this->collisions = collisions;
+	this->collisionHandler = new Collisions(collisions);
 }
 
 bool Map::load() {
@@ -27,5 +28,13 @@ bool Map::load() {
 
 void Map::draw(sf::RenderWindow& window) {
 	window.draw(map);
+}
+
+bool Map::handleCollision(sf::Vector2f& newPosition, sf::Vector2f movement) {
+	if (!this->collisionHandler->checkCollision(newPosition.x, newPosition.y, this->mapWidth, this->tileSize.x)) {
+		newPosition += movement;
+		return true;
+	}
+	return false;
 }
 

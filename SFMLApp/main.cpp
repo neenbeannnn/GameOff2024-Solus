@@ -45,11 +45,6 @@ int main()
     Map* map = new Map(make_pair(700.0f, 700.0f), aptTilsetPath, 32, 15, 10, level, apartmentFirstFloorCollisions);
     map->load();
 
-    /*sf::RectangleShape block(sf::Vector2f(100.0f, 100.0f));
-    block.setOutlineColor(sf::Color::Red);
-    block.setFillColor(sf::Color::Black);
-    block.setPosition(sf::Vector2f(100.0f, 100.0f));*/
-
     texture.loadFromFile("gato.png", sf::IntRect(0, 0, 32, 32));
     sf::Sprite sprite(texture);
     sprite.setScale(4.0f, 4.0f);
@@ -105,11 +100,15 @@ int main()
 
             sf::Vector2f newPosition = sprite.getPosition() + movement;
 
-            Collisions collisions;
+            if (map->handleCollision(newPosition, movement)) {
+                sprite.move(movement);
+            }
+
+            /*Collisions collisions;
 
             if (!collisions.checkCollisionApartmentFirstFloor(newPosition.x, newPosition.y, 15, 32)) {
                 sprite.move(movement);
-            }
+            }*/
 
             sf::RectangleShape debugCollisionBox(sf::Vector2f(32, 32));
             debugCollisionBox.setPosition(newPosition.x, newPosition.y);
@@ -132,7 +131,6 @@ int main()
         dialogueBox.setPosition(sf::Vector2f(viewCenter.x - dialogueBox.getSize().x / 2, viewCenter.y + viewSize.y / 2 - dialogueBox.getSize().y - 10));
 
         window.clear();
-        window.draw(sprite);
         /*window.draw(collisionBox);*/ // Draw the collision box
 
         if (showDialogue) {

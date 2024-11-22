@@ -2,29 +2,20 @@
 
 #ifndef COLLISIONS_H
 #define COLLISIONS_H
+
+#include <vector>
+#include <iostream>
+using namespace std;
+
 class Collisions
 {
 public:
-	//Defines all allowed Map Names
-	enum class MapName {
-		ApartmentFirstFloor,
-		ApartmentSecondFloor,
-		ApartmentLeftRoom,
-		ApartmentBathroom,
-		ApartmentRightRoom,
 
-		Town,
-		ForestStageOne,
-		ForestStageTwo,
-		ForestStageThree
-	};
+	Collisions(std::vector<int> collisions);
 
-	Collisions();
-
-	bool checkCollisionApartmentFirstFloor(float x, float y, int mapWidth, int tileSize);
-	bool checkCollision(float x, float y, int mapWidth, int tileSize, int* collisionLayer);
+	bool checkCollision(float x, float y, int mapWidth, int tileSize);
 private:
-	MapName currentMap;
+	int* collisionLayer;
 };
 
 #endif

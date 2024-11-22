@@ -1,33 +1,11 @@
 #include "Collisions.h"
-#include <vector>
-#include <iostream>
-using namespace std;
-
-int apartmentFirstFloorCollisions[] = {
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-    1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1,
-    1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1,
-    1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1,
-    1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1,
-    1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1,
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
-};
 
 
-Collisions::Collisions()
-{
+Collisions::Collisions(std::vector<int> collisions) {
+    this->collisionLayer = collisions.data();
 }
 
-//Helper Functions (for each area)
-bool Collisions::checkCollisionApartmentFirstFloor(float x, float y, int mapWidth, int tileSize) {
-    return checkCollision(x, y, mapWidth, tileSize, apartmentFirstFloorCollisions);
-}
-
-//End of Helper Functions
-
-bool Collisions::checkCollision(float x, float y, int mapWidth, int tileSize, int* collisionLayer) {
+bool Collisions::checkCollision(float x, float y, int mapWidth, int tileSize) {
     
     int scaledTileSize = static_cast<int>(tileSize * 4.0f) - 2;
     int tileX = static_cast<int>(x) / scaledTileSize;

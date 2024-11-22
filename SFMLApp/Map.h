@@ -8,6 +8,7 @@
 #include <vector>
 #include <string>
 #include "TileMap.h"
+#include "Collisions.h"
 
 using namespace std;
 class Map
@@ -23,6 +24,9 @@ public:
 	//Draw the map
 	void draw(sf::RenderWindow& window);
 
+	//Collision checking
+	bool handleCollision(sf::Vector2f& newPosition, sf::Vector2f movement);
+
 private:
 	TileMap map;
 	sf::Vector2f spawnPoints;		//Spawn points specific to each map
@@ -32,6 +36,7 @@ private:
 	unsigned int mapHeight;
 	std::vector<int> tiles;
 	std::vector<int> collisions;
+	Collisions *collisionHandler;
 	const float scale = 4.0f;
 };
 
