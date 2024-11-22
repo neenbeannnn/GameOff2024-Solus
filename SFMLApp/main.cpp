@@ -2,19 +2,18 @@
 #include "Game.h"
 #include "DialogueBox.h"
 #include "Collisions.h"
+#include "Map.h"
 #include <iostream>
 
 int main()
 {
     Game game;
     sf::Texture texture;
-    TileMap map;
     sf::View view;
 
     view.setSize(sf::Vector2f(1000, 800));
-
-    // Tile Map
-    const int level[] =
+    
+    const std::vector<int> level =
     {
         60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60,
         60, 60, 60, 60, 60, 60, 6, 7, 60, 60, 60, 60, 60, 60, 60,
@@ -29,14 +28,27 @@ int main()
 
     };
 
-    map.load("tilemaps/APT_TILEMAP.png", sf::Vector2u(32, 32), level, 15, 10);
-    map.setScale(4.0f, 4.0f); // Scale up the tile map
-    map.setDebugDrawing(true); // Enable debug drawing
+    const std::vector<int> apartmentFirstFloorCollisions = 
+    {
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1,
+        1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1,
+        1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+    };
 
-    sf::RectangleShape block(sf::Vector2f(100.0f, 100.0f));
+    std::string aptTilsetPath = "tilemaps/APT_TILEMAP.png";
+    Map* map = new Map(make_pair(700.0f, 700.0f), aptTilsetPath, 32, 15, 10, level, apartmentFirstFloorCollisions);
+    map->load();
+
+    /*sf::RectangleShape block(sf::Vector2f(100.0f, 100.0f));
     block.setOutlineColor(sf::Color::Red);
     block.setFillColor(sf::Color::Black);
-    block.setPosition(sf::Vector2f(100.0f, 100.0f));
+    block.setPosition(sf::Vector2f(100.0f, 100.0f));*/
 
     texture.loadFromFile("gato.png", sf::IntRect(0, 0, 32, 32));
     sf::Sprite sprite(texture);
@@ -120,15 +132,14 @@ int main()
         dialogueBox.setPosition(sf::Vector2f(viewCenter.x - dialogueBox.getSize().x / 2, viewCenter.y + viewSize.y / 2 - dialogueBox.getSize().y - 10));
 
         window.clear();
-        window.draw(map);
-        window.draw(block);
         window.draw(sprite);
         /*window.draw(collisionBox);*/ // Draw the collision box
 
         if (showDialogue) {
             dialogueBox.draw(window); // Draw the dialogue box
         }
-
+        map->draw(window);
+        window.draw(sprite);
         window.display();
     }
 
