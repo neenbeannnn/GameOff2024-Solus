@@ -1,6 +1,6 @@
 #include "Map.h"
 
-Map::Map(pair<float, float> spawnPoints, std::string tileset, int tileSize, int mapWidth, int mapHeight, const std::vector<int> tiles, const std::vector<int>& collisions) {
+Map::Map(pair<float, float> spawnPoints, std::string tileset, int tileSize, int mapWidth, int mapHeight, const std::vector<int> tiles, const std::vector<int>& collisions, bool canMoveOut) {
 	this->spawnPoints = sf::Vector2f(spawnPoints.first, spawnPoints.second);
 	this->tileset = tileset;
 	this->tileSize = sf::Vector2u(tileSize, tileSize);

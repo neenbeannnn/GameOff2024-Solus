@@ -3,6 +3,7 @@
 #include "DialogueBox.h"
 #include "Collisions.h"
 #include "Map.h"
+#include "MapManager.h"
 #include <iostream>
 
 int main()
@@ -13,7 +14,7 @@ int main()
 
     view.setSize(sf::Vector2f(1000, 800));
     
-    const std::vector<int> level =
+    const std::vector<int> apartmentFirstFloor =
     {
         60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60,
         60, 60, 60, 60, 60, 60, 6, 7, 60, 60, 60, 60, 60, 60, 60,
@@ -41,14 +42,87 @@ int main()
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
     };
 
+    const std::vector<int> apartmentSecondFloor =
+    {
+        60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60,
+        60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60,
+        60, 0,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  2,  60,
+        60, 20, 21, 21, 6,  7,  21, 21, 21, 6,  7,  21, 21, 22, 60,
+        60, 40, 41, 41, 26, 27, 41, 41, 41, 26, 17, 41, 41, 42, 60,
+        60, 23, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 25, 60,
+        60, 23, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 25, 60,
+        60, 23, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 25, 60,
+        60, 43, 44, 44, 44, 44, 65, 65, 44, 44, 44, 44, 44, 45, 60,
+        60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60
+    };
+
+    const std::vector<int> apartmentSecondFloorCollisions =
+    {
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1,
+        1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1,
+        1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+    };
+
+    const std::vector<int> apartmentBathroom =
+    {
+        60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60,
+        60, 0,  1,  1,  1,  1,  1,  1,  1,  2,  60, 60, 60, 60, 60,
+        60, 20, 64, 21, 21, 21, 21, 21, 21, 22, 60, 60, 60, 60, 60,
+        60, 40, 41, 41, 41, 41, 41, 41, 41, 42, 60, 60, 60, 60, 60,
+        60, 30, 31, 31, 31, 31, 31, 24, 24, 25, 60, 60, 60, 60, 60,
+        60, 30, 31, 31, 31, 31, 31, 24, 24, 25, 60, 60, 60, 60, 60,
+        60, 50, 51, 51, 16, 31, 31, 24, 24, 25, 60, 60, 60, 60, 60,
+        60, 60, 60, 60, 30, 31, 31, 24, 24, 67, 60, 60, 60, 60, 60,
+        60, 60, 60, 60, 50, 51, 51, 44, 44, 45, 60, 60, 60, 60, 60,
+        60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60
+    };
+
+    const std::vector<int> apartmentBathroomCollisions =
+    {
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1,
+        1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+    };
+
+    const std::vector<int> doorCollisions;
+    const std::vector<int> interactableCollisions;
+
+    //Create map manager
+    MapManager* mapManager = new MapManager();
+
+    //Create all Map objects
     std::string aptTilsetPath = "tilemaps/APT_TILEMAP.png";
-    Map* map = new Map(make_pair(700.0f, 700.0f), aptTilsetPath, 32, 15, 10, level, apartmentFirstFloorCollisions);
-    map->load();
+    auto apartmentFirstFloorMap = std::make_shared<Map>(make_pair(700.0f, 700.0f), aptTilsetPath, 32, 15, 10, apartmentFirstFloor, apartmentFirstFloorCollisions);
+    Map* apartmentSecondFloorMap = new Map(make_pair(800.0f, 1000.0f), aptTilsetPath, 32, 15, 10, apartmentSecondFloor, apartmentSecondFloorCollisions);
+    Map* apartmentBathroomMap = new Map(make_pair(1130.0f, 900.0f), aptTilsetPath, 32, 15, 10, apartmentBathroom, apartmentBathroomCollisions);
+    
+    //Insert all Map objects in MapManager
+    std::string apartmentFirstFloorName = "APARTMENT_FIRST_FLOOR";
+    std::string apartmentSecondFloorName = "APARTMENT_SECOND_FLOOR";
+    std::string apartmentBathroomName = "APARTMENT_BATHROOM";
+    std::string apartmentLeftRoomName = "APARTMENT_LEFT_ROOM";
+    std::string apartmentRightRoomName = "APARTMENT_RIGHT_ROOM";
+    mapManager->addMap(apartmentFirstFloorName, apartmentFirstFloorMap);
+
+    mapManager->getCurrentMap()->load();
 
     texture.loadFromFile("gato.png", sf::IntRect(0, 0, 32, 32));
     sf::Sprite sprite(texture);
     sprite.setScale(4.0f, 4.0f);
-    sprite.setPosition(sf::Vector2f(700.0f, 700.0f));
+    sprite.setPosition(mapManager->getCurrentMap()->getSpawnPoints());
 
     // Create a rectangle shape to represent the sprite's collision box
     /*sf::RectangleShape collisionBox;
@@ -100,7 +174,7 @@ int main()
 
             sf::Vector2f newPosition = sprite.getPosition() + movement;
 
-            if (map->handleCollision(newPosition, movement)) {
+            if (mapManager->getCurrentMap()->handleCollision(newPosition, movement)) {
                 sprite.move(movement);
             }
 
@@ -130,7 +204,7 @@ int main()
         if (showDialogue) {
             dialogueBox.draw(window); // Draw the dialogue box
         }
-        map->draw(window);
+        mapManager->getCurrentMap()->draw(window);
         window.draw(sprite);
         window.display();
     }

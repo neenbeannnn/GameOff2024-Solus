@@ -16,8 +16,12 @@ class Map
 //TODO: Add - Door doors, Interactables interactables
 public:
 	//Constructor for Map
-	Map(pair<float, float> spawnPoints, std::string tileset, int tileSize, int mapWidth, int mapHeight, const std::vector<int> tiles, const std::vector<int>& collisions);
+	//TODO implement bool canGoOut
+	Map(pair<float, float> spawnPoints, std::string tileset, int tileSize, int mapWidth, int mapHeight, const std::vector<int> tiles, const std::vector<int>& collisions, bool canMoveOut = true);
 
+	//Get the Spawn Points
+	sf::Vector2f getSpawnPoints() { return this->spawnPoints; }
+	
 	//Returns true if successfully loaded
 	bool load();
 
@@ -26,6 +30,11 @@ public:
 
 	//Collision checking
 	bool handleCollision(sf::Vector2f& newPosition, sf::Vector2f movement);
+
+	//If conditions are true, then change canGoOut to True
+	void setCanGoOut();
+	//Apartment: once you interact with all interactables you can go to Town
+	//Town: once you interact with the villagers with the dog you can go to Forest
 
 private:
 	TileMap map;
@@ -38,6 +47,7 @@ private:
 	std::vector<int> collisions;
 	Collisions *collisionHandler;
 	const float scale = 4.0f;
+	bool canGoOut;
 };
 
 #endif
