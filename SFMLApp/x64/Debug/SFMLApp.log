@@ -1,60 +1,64 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (SFMLApp.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Player.cpp
+  DialogueBox.cpp
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\DialogueBox.h(22,30): error C2086: 'std::vector<std::string,std::allocator<std::string>> DialogueBox::lines': redefinition
+  (compiling source file 'DialogueBox.cpp')
+  
+  Game.cpp
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,67): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,67): warning C4244:         with
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,67): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,67): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,67): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,51): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,51): warning C4244:         with
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,51): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,51): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,51): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,73): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,73): warning C4244:         with
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,73): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,73): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,73): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,57): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,57): warning C4244:         with
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,57): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,57): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,57): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,79): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,79): warning C4244:         with
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,79): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,79): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,79): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,57): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,57): warning C4244:         with
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,57): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,57): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,57): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,73): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,73): warning C4244:         with
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,73): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,73): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,73): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,51): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,51): warning C4244:         with
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,51): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,51): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,51): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,70): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,70): warning C4244:         with
@@ -65,7 +69,7 @@ C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,70): warning C4244:
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,70): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,70): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,70): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,53): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,53): warning C4244:         with
@@ -76,7 +80,7 @@ C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,53): warning C4244:
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,53): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,53): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,53): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,76): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,76): warning C4244:         with
@@ -87,7 +91,7 @@ C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,76): warning C4244:
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,76): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,76): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,76): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,59): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,59): warning C4244:         with
@@ -98,7 +102,7 @@ C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,59): warning C4244:
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,59): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,59): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,59): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,82): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,82): warning C4244:         with
@@ -109,7 +113,7 @@ C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,82): warning C4244:
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,82): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,82): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,82): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,59): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,59): warning C4244:         with
@@ -120,7 +124,7 @@ C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,59): warning C4244:
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,59): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,59): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,59): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,76): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,76): warning C4244:         with
@@ -131,7 +135,7 @@ C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,76): warning C4244:
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,76): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,76): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,76): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,53): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,53): warning C4244:         with
@@ -142,7 +146,7 @@ C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,53): warning C4244:
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,53): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,53): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,53): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,81): warning C4244: 'argument': conversion from 'const T' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,81): warning C4244:         with
@@ -153,7 +157,7 @@ C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,81): warning C4244:
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,81): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,81): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,81): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,67): warning C4244: 'argument': conversion from 'const T' to 'T', possible loss of data
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,67): warning C4244:         with
@@ -164,12 +168,191 @@ C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,67): warning C4244:
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,67): warning C4244:         [
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,67): warning C4244:             T=float
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,67): warning C4244:         ]
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(100,65): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(100,47): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-  (compiling source file 'Player.cpp')
+  (compiling source file 'Game.cpp')
   
-  SFMLApp.vcxproj -> C:\Users\rapha\Source\Repos\GameOff2024\x64\Debug\GameOff2024.exe
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\DialogueBox.h(22,30): error C2086: 'std::vector<std::string,std::allocator<std::string>> DialogueBox::lines': redefinition
+  (compiling source file 'Game.cpp')
+  
+  main.cpp
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,67): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,67): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,67): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,67): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,67): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,51): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,51): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,51): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,51): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(40,51): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,73): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,73): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,73): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,73): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,73): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,57): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,57): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,57): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,57): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(41,57): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,79): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,79): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,79): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,79): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,79): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,57): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,57): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,57): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,57): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(42,57): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,73): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,73): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,73): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,73): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,73): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,51): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,51): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,51): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,51): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(43,51): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,70): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,70): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,70): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,70): warning C4244:             T=unsigned int
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,70): warning C4244:         ]
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,70): warning C4244:         and
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,70): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,70): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,70): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,53): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,53): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,53): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,53): warning C4244:             T=unsigned int
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,53): warning C4244:         ]
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,53): warning C4244:         and
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,53): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,53): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(46,53): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,76): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,76): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,76): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,76): warning C4244:             T=unsigned int
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,76): warning C4244:         ]
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,76): warning C4244:         and
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,76): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,76): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,76): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,59): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,59): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,59): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,59): warning C4244:             T=unsigned int
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,59): warning C4244:         ]
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,59): warning C4244:         and
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,59): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,59): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(47,59): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,82): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,82): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,82): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,82): warning C4244:             T=unsigned int
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,82): warning C4244:         ]
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,82): warning C4244:         and
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,82): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,82): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,82): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,59): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,59): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,59): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,59): warning C4244:             T=unsigned int
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,59): warning C4244:         ]
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,59): warning C4244:         and
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,59): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,59): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(48,59): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,76): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,76): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,76): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,76): warning C4244:             T=unsigned int
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,76): warning C4244:         ]
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,76): warning C4244:         and
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,76): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,76): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,76): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,53): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,53): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,53): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,53): warning C4244:             T=unsigned int
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,53): warning C4244:         ]
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,53): warning C4244:         and
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,53): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,53): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(49,53): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,81): warning C4244: 'argument': conversion from 'const T' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,81): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,81): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,81): warning C4244:             T=unsigned int
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,81): warning C4244:         ]
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,81): warning C4244:         and
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,81): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,81): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,81): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,67): warning C4244: 'argument': conversion from 'const T' to 'T', possible loss of data
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,67): warning C4244:         with
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,67): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,67): warning C4244:             T=unsigned int
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,67): warning C4244:         ]
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,67): warning C4244:         and
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,67): warning C4244:         [
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,67): warning C4244:             T=float
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(91,67): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(100,65): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\TileMap.h(100,47): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\rapha\source\repos\GameOff2024\SFMLApp\DialogueBox.h(22,30): error C2086: 'std::vector<std::string,std::allocator<std::string>> DialogueBox::lines': redefinition
+  (compiling source file 'main.cpp')
+  
+  Generating Code...

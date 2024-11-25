@@ -7,6 +7,8 @@ DialogueBox::DialogueBox()
 
 void DialogueBox::init(const std::string& fontFile, const std::string& text, const sf::Vector2f& size, const sf::Vector2f& position)
 {
+    
+
     if (!font.loadFromFile(fontFile)) {
         std::cerr << "Failed to load font" << std::endl;
     }
@@ -24,9 +26,19 @@ void DialogueBox::init(const std::string& fontFile, const std::string& text, con
     dialogueText.setPosition(position.x + 20, position.y + 20);
 }
 
-void DialogueBox::setText(const std::string& text)
+//returns a bool to check if there are more lines to display
+bool DialogueBox::iterThruText()
 {
-    dialogueText.setString(text);
+	if (lineIter != lines.end())
+	{
+		dialogueText.setString(*lineIter);
+		lineIter++;
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 void DialogueBox::setPosition(const sf::Vector2f& position)

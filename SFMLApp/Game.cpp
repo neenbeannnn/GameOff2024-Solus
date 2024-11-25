@@ -1,5 +1,6 @@
 #include "Game.h"
 #include <iostream>
+#include<vector>
 
 Game::Game()
     : window(sf::VideoMode(800, 600), "SFML works!"),
@@ -67,6 +68,7 @@ void Game::initPlayer()
 
 void Game::initDialogueBox()
 {
+	
     dialogueBox.init("PixelatedEleganceRegular-ovyAA.ttf", "Look mom, I'm a cat!", sf::Vector2f(600.0f, 100.0f), sf::Vector2f(200.0f, 450.0f));
 }
 
@@ -75,6 +77,8 @@ void Game::run()
     sf::Clock clock;
     sf::Time timeSinceLastUpdate = sf::Time::Zero;
     const sf::Time TimePerFrame = sf::seconds(1.f / 60.f);
+
+    
 
     while (window.isOpen())
     {
@@ -93,12 +97,13 @@ void Game::run()
 void Game::processEvents()
 {
     sf::Event event;
+
     while (window.pollEvent(event))
     {
         if (event.type == sf::Event::Closed)
             window.close();
         if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::E)
-            showDialogue = !showDialogue; // Toggle dialogue box visibility
+			showDialogue = dialogueBox.iterThruText();
     }
 }
 
@@ -115,6 +120,7 @@ void Game::update(sf::Time deltaTime)
     sf::Vector2f viewCenter = window.getView().getCenter();
     sf::Vector2f viewSize = window.getView().getSize();
     dialogueBox.setPosition(sf::Vector2f(viewCenter.x - dialogueBox.getSize().x / 2, viewCenter.y + viewSize.y / 2 - dialogueBox.getSize().y - 10));
+	
 }
 
 void Game::render()

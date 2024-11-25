@@ -136,6 +136,7 @@
   <ItemGroup>
     <ClCompile Include="Animations.cpp" />
     <ClCompile Include="Collisions.cpp" />
+    <ClCompile Include="CutsceneManager.cpp" />
     <ClCompile Include="DialogueBox.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HelperFunctions.cpp" />
@@ -148,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="Animations.h" />
     <ClInclude Include="Collisions.h" />
+    <ClInclude Include="CutsceneManager.h" />
     <ClInclude Include="DialogueBox.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="HelperFunctions.h" />
