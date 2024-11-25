@@ -3,7 +3,7 @@
 MapManager::MapManager() {}
 
 //Add a new map
-void MapManager::addMap(const std::string& name, std::shared_ptr<Map> map) {
+void MapManager::addMap(MapName name, std::shared_ptr<Map> map) {
 	allMaps[name] = map;
 	if (!currentMap) {
 		currentMap = map; //Sets the first added map as the default map
@@ -11,11 +11,7 @@ void MapManager::addMap(const std::string& name, std::shared_ptr<Map> map) {
 }
 
 //Switch to a specific map and return True if found
-bool MapManager::switchToMap(const std::string& name) {
-	auto newMap = allMaps.find(name);
-	if (newMap != allMaps.end()) {
-		this->currentMap = newMap->second;
-		return true;
-	}
-	return false;
+void MapManager::switchToMap(MapName map) {
+	auto newMap = allMaps.find(map);
+	currentMap = newMap->second;
 }

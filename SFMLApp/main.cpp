@@ -4,6 +4,7 @@
 #include "Collisions.h"
 #include "Map.h"
 #include "MapManager.h"
+#include "Animations.h"
 #include <iostream>
 
 int main()
@@ -11,6 +12,7 @@ int main()
     Game game;
     sf::Texture texture;
     sf::View view;
+    sf::Event event;
 
     view.setSize(sf::Vector2f(1000, 800));
     
@@ -97,6 +99,34 @@ int main()
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
     };
 
+    const std::vector<int> apartmentLeftRoom =
+    {
+        60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60,
+        60,  0, 18, 19,  1,  1,  1,  1,  1,  2, 60, 60, 60, 60, 60,
+        60, 20, 38, 39, 21, 21, 21, 21, 21, 22, 60, 60, 60, 60, 60,
+        60, 40, 58, 59, 41, 41, 41, 41, 41, 42, 60, 60, 60, 60, 60,
+        60,  3,  4,  4,  4,  4,  4,  4,  4,  5, 60, 60, 60, 60, 60,
+        60, 23, 24, 24, 24, 24, 24, 24, 24, 25, 60, 60, 60, 60, 60,
+        60, 66, 24, 24, 24, 24, 24, 24, 24, 25, 60, 60, 60, 60, 60,
+        60, 43, 44, 44, 65, 65, 44, 44, 44, 45, 60, 60, 60, 60, 60,
+        60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60,
+        60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60
+    };
+
+    const std::vector<int> apartmentLeftRoomCollisions =
+    {
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1,
+        1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1,
+        1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+    };
+
     const std::vector<int> doorCollisions;
     const std::vector<int> interactableCollisions;
 
@@ -105,9 +135,10 @@ int main()
 
     //Create all Map objects
     std::string aptTilsetPath = "tilemaps/APT_TILEMAP.png";
-    auto apartmentFirstFloorMap = std::make_shared<Map>(make_pair(700.0f, 700.0f), aptTilsetPath, 32, 15, 10, apartmentFirstFloor, apartmentFirstFloorCollisions);
-    Map* apartmentSecondFloorMap = new Map(make_pair(800.0f, 1000.0f), aptTilsetPath, 32, 15, 10, apartmentSecondFloor, apartmentSecondFloorCollisions);
-    Map* apartmentBathroomMap = new Map(make_pair(1130.0f, 900.0f), aptTilsetPath, 32, 15, 10, apartmentBathroom, apartmentBathroomCollisions);
+    auto apartmentFirstFloorMap = std::make_shared<Map>(make_pair(370.0f, 1000.0f), aptTilsetPath, 32, 15, 10, apartmentFirstFloor, apartmentFirstFloorCollisions);
+    auto apartmentSecondFloorMap = std::make_shared<Map>(make_pair(800.0f, 1000.0f), aptTilsetPath, 32, 15, 10, apartmentSecondFloor, apartmentSecondFloorCollisions);
+    auto apartmentBathroomMap = std::make_shared<Map>(make_pair(1130.0f, 900.0f), aptTilsetPath, 32, 15, 10, apartmentBathroom, apartmentBathroomCollisions);
+    auto apartmentLeftRoomMap = std::make_shared<Map>(make_pair(600.0f, 870.0f), aptTilsetPath, 32, 15, 10, apartmentLeftRoom, apartmentLeftRoomCollisions);
     
     //Insert all Map objects in MapManager
     std::string apartmentFirstFloorName = "APARTMENT_FIRST_FLOOR";
@@ -115,9 +146,22 @@ int main()
     std::string apartmentBathroomName = "APARTMENT_BATHROOM";
     std::string apartmentLeftRoomName = "APARTMENT_LEFT_ROOM";
     std::string apartmentRightRoomName = "APARTMENT_RIGHT_ROOM";
-    mapManager->addMap(apartmentFirstFloorName, apartmentFirstFloorMap);
+    mapManager->addMap(MapName::APARTMENT_FIRST_FLOOR, apartmentFirstFloorMap);
+    mapManager->addMap(MapName::APARTMENT_LEFT_ROOM, apartmentLeftRoomMap);
+    mapManager->addMap(MapName::APARTMENT_SECOND_FLOOR, apartmentSecondFloorMap);
+    mapManager->addMap(MapName::APARTMENT_BATHROOM, apartmentBathroomMap);
+    
+
+    //mapManager->switchToMap(MapName::APARTMENT_SECOND_FLOOR);
 
     mapManager->getCurrentMap()->load();
+    
+    /*if (!texture.loadFromFile("sprites/CatSprite.png")) {
+        std::cerr << "Failed to load texture!" << std::endl;
+        return -1;
+    }
+
+    Animations animation(texture, sf::Vector2u(4, 4), 0.1f);*/
 
     texture.loadFromFile("gato.png", sf::IntRect(0, 0, 32, 32));
     sf::Sprite sprite(texture);
