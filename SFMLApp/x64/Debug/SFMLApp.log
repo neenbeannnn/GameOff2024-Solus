@@ -172,5 +172,11 @@ C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(100,65): warning C4244: 'ar
 C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(100,47): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
   (compiling source file 'main.cpp')
   
-C:\Users\nina\source\repos\SFMLApp\SFMLApp\main.cpp(15,15): warning C4101: 'event': unreferenced local variable
-  SFMLApp.vcxproj -> C:\Users\nina\source\repos\SFMLApp\x64\Debug\GameOff2024.exe
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\main.cpp(229,19): error C2039: 'update': is not a member of 'std::shared_ptr<Animations>'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      see declaration of 'std::shared_ptr<Animations>'
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\main.cpp(230,41): error C2039: 'getUVRect': is not a member of 'std::shared_ptr<Animations>'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      see declaration of 'std::shared_ptr<Animations>'
+  

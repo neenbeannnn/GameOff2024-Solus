@@ -5,12 +5,13 @@
 #include "Map.h"
 #include "MapManager.h"
 #include "Animations.h"
+#include "CatSprite.h"
 #include <iostream>
 
 int main()
 {
     Game game;
-    sf::Texture texture;
+    sf::Texture catTexture;
     sf::View view;
     sf::Event event;
 
@@ -141,31 +142,24 @@ int main()
     auto apartmentLeftRoomMap = std::make_shared<Map>(make_pair(600.0f, 870.0f), aptTilsetPath, 32, 15, 10, apartmentLeftRoom, apartmentLeftRoomCollisions);
     
     //Insert all Map objects in MapManager
-    std::string apartmentFirstFloorName = "APARTMENT_FIRST_FLOOR";
-    std::string apartmentSecondFloorName = "APARTMENT_SECOND_FLOOR";
-    std::string apartmentBathroomName = "APARTMENT_BATHROOM";
-    std::string apartmentLeftRoomName = "APARTMENT_LEFT_ROOM";
-    std::string apartmentRightRoomName = "APARTMENT_RIGHT_ROOM";
     mapManager->addMap(MapName::APARTMENT_FIRST_FLOOR, apartmentFirstFloorMap);
     mapManager->addMap(MapName::APARTMENT_LEFT_ROOM, apartmentLeftRoomMap);
     mapManager->addMap(MapName::APARTMENT_SECOND_FLOOR, apartmentSecondFloorMap);
     mapManager->addMap(MapName::APARTMENT_BATHROOM, apartmentBathroomMap);
     
-
-    //mapManager->switchToMap(MapName::APARTMENT_SECOND_FLOOR);
-
     mapManager->getCurrentMap()->load();
     
-    /*if (!texture.loadFromFile("sprites/CatSprite.png")) {
-        std::cerr << "Failed to load texture!" << std::endl;
-        return -1;
-    }
+    //Create Cat Sprite
+    CatSprite* catSprite = new CatSprite();
+    catTexture.loadFromFile("sprites/CatSprite_Sitting.png");
+    auto animation = std::make_shared<Animations>(catTexture, sf::Vector2u(4, 4), 0.4f);
 
-    Animations animation(texture, sf::Vector2u(4, 4), 0.1f);*/
+    //Add animations into Cat Sprite
+    catSprite->addAnimation(CatAnimation::CAT_SITTING, animation);
 
-    texture.loadFromFile("gato.png", sf::IntRect(0, 0, 32, 32));
-    sf::Sprite sprite(texture);
-    sprite.setScale(4.0f, 4.0f);
+
+    /*texture.loadFromFile("gato.png", sf::IntRect(0, 0, 32, 32));*/
+    sf::Sprite sprite(catTexture);
     sprite.setPosition(mapManager->getCurrentMap()->getSpawnPoints());
 
     // Create a rectangle shape to represent the sprite's collision box
@@ -192,6 +186,8 @@ int main()
     window.setView(view);
 
     const float movementSpeed = 0.3f; // Movement speed
+
+    sf::Clock clock; //For the Animations
 
     while (window.isOpen())
     {
@@ -225,10 +221,14 @@ int main()
             sf::RectangleShape debugCollisionBox(sf::Vector2f(32, 32));
             debugCollisionBox.setPosition(newPosition.x, newPosition.y);
             debugCollisionBox.setFillColor(sf::Color(255, 0, 0, 100)); // Semi-transparent red
-            window.draw(debugCollisionBox);
+            //window.draw(debugCollisionBox);
         }
 
-        
+        float deltaTime = clock.restart().asSeconds();
+
+        animation.update(0, deltaTime);
+        sprite.setTextureRect(animation.getUVRect());
+        sprite.setScale(4.0f, 4.0f);
 
         // Update the collision box to match the sprite's global bounds
         /*collisionBox.setPosition(sprite.getGlobalBounds().left, sprite.getGlobalBounds().top);
@@ -245,10 +245,12 @@ int main()
         window.clear();
         /*window.draw(collisionBox);*/ // Draw the collision box
 
+        mapManager->getCurrentMap()->draw(window);
+
         if (showDialogue) {
             dialogueBox.draw(window); // Draw the dialogue box
         }
-        mapManager->getCurrentMap()->draw(window);
+        
         window.draw(sprite);
         window.display();
     }
