@@ -11,7 +11,7 @@
 int main()
 {
     Game game;
-    sf::Texture catTexture;
+    sf::Texture catTexture, catTextureLeft, catTextureRight, catTextureForward, catTextureBackward;
     sf::View view;
     sf::Event event;
 
@@ -153,10 +153,25 @@ int main()
     CatSprite* catSprite = new CatSprite();
     catTexture.loadFromFile("sprites/CatSprite_Sitting.png");
     auto animation = std::make_shared<Animations>(catTexture, sf::Vector2u(4, 4), 0.4f);
+    
+    catTextureLeft.loadFromFile("sprites/CatSprite_Left.png");
+    auto animationLeft = std::make_shared<Animations>(catTextureLeft, sf::Vector2u(7, 7), 0.4f);
+
+    catTextureRight.loadFromFile("sprites/CatSprite_Right.png");
+    auto animationRight = std::make_shared<Animations>(catTextureRight, sf::Vector2u(7, 7), 0.4f);
+
+    catTextureForward.loadFromFile("sprites/CatSprite_Forward.png");
+    auto animationForward = std::make_shared<Animations>(catTextureForward, sf::Vector2u(6, 6), 0.4f);
+
+    catTextureBackward.loadFromFile("sprites/CatSprite_Backward.png");
+    auto animationBackward = std::make_shared<Animations>(catTextureBackward, sf::Vector2u(5, 5), 0.4f);
 
     //Add animations into Cat Sprite
     catSprite->addAnimation(CatAnimation::CAT_SITTING, animation);
-
+    catSprite->addAnimation(CatAnimation::CAT_LEFT, animationLeft);
+    catSprite->addAnimation(CatAnimation::CAT_RIGHT, animationRight);
+    catSprite->addAnimation(CatAnimation::CAT_FORWARD, animationForward);
+    catSprite->addAnimation(CatAnimation::CAT_BACKWARD, animationBackward);
 
     /*texture.loadFromFile("gato.png", sf::IntRect(0, 0, 32, 32));*/
     sf::Sprite sprite(catTexture);
@@ -185,9 +200,12 @@ int main()
     view.setCenter(sprite.getPosition());
     window.setView(view);
 
-    const float movementSpeed = 0.3f; // Movement speed
+    const float movementSpeed = 0.1f; // Movement speed
 
     sf::Clock clock; //For the Animations
+    sf::Clock idleClock; //Clock to track time idel
+    sf::Time idleThreshold = sf::seconds(0.5); //2 second threshold
+    bool isIdle = false;
 
     while (window.isOpen())
     {
@@ -203,14 +221,42 @@ int main()
         sf::Vector2f movement(0.0f, 0.0f);
 
         if (!showDialogue) { // Only process movement if the dialogue box is not visible
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+                catSprite->switchToAnimation(CatAnimation::CAT_LEFT);
                 movement.x -= movementSpeed;
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+                sprite.setTexture(catTextureLeft);
+                isIdle = false;
+                idleClock.restart();
+            }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+                catSprite->switchToAnimation(CatAnimation::CAT_RIGHT);
                 movement.x += movementSpeed;
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+                sprite.setTexture(catTextureRight);
+                isIdle = false;
+                idleClock.restart();
+            }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+                catSprite->switchToAnimation(CatAnimation::CAT_BACKWARD);
                 movement.y -= movementSpeed;
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+                sprite.setTexture(catTextureBackward);
+                isIdle = false;
+                idleClock.restart();
+            }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+                catSprite->switchToAnimation(CatAnimation::CAT_FORWARD);
                 movement.y += movementSpeed;
+                sprite.setTexture(catTextureForward);
+                isIdle = false;
+                idleClock.restart();
+            }
+            else {
+                //If no movement keys are pressed, go back to idle position
+                if (idleClock.getElapsedTime() > idleThreshold && !isIdle) {
+                    catSprite->switchToAnimation(CatAnimation::CAT_SITTING);
+                    sprite.setTexture(catTexture);
+                    isIdle = true;
+                }
+            }
 
             sf::Vector2f newPosition = sprite.getPosition() + movement;
 
