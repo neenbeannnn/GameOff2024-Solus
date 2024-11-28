@@ -226,8 +226,8 @@ int main()
 
         float deltaTime = clock.restart().asSeconds();
 
-        animation.update(0, deltaTime);
-        sprite.setTextureRect(animation.getUVRect());
+        animation->update(0, deltaTime);
+        sprite.setTextureRect(animation->getUVRect());
         sprite.setScale(4.0f, 4.0f);
 
         // Update the collision box to match the sprite's global bounds
