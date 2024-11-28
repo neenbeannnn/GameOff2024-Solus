@@ -9,7 +9,8 @@ public:
 	//NPC(std::string spriteDirectory);
 	void drawTo(sf::RenderWindow& window);
 	void setPosition(float x, float y);
-	sf::Vector2f getPosition() const;
+	void getPosition() const;
+	sf::FloatRect getBoundBox() const;
 	/*literally all dialogue box stuff
 	decided not to use inheritance bc an NPC is not a dialogue box.
 	obviously the functions aren't complete but first */
@@ -21,6 +22,8 @@ public:
 	void displayDialogue(bool isVisible);
 	void changeDialogue(const std::string newMsg);
 	void pressEToContinue(sf::Keyboard::Key key, bool isPressed);
+	void interactPrompt(); //brings up prompt to "interact"
+	void togglePrompt(); //turns prompt on and off if leaving proximity
 
 private:
 	/* someone is personally going to have to
@@ -30,7 +33,8 @@ private:
 	sf::RectangleShape npc;
 	sf::Vector2f position;
 	DialogueBox dialogueBox;
-
+	DialogueBox textPrompt;
+	bool displayPrompt = true;
 	//sf::Sprite sprite;
 	//sf::Texture texture;
 

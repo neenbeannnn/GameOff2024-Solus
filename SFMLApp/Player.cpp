@@ -1,6 +1,9 @@
 #include "Player.h"
+#include <iomanip>
+
 Player::Player() : up(false), down(false), left(false), right(false)
 {
+	
 	rect.setSize(sf::Vector2f(50, 50));
 	rect.setFillColor(sf::Color::Blue);
 	position = sf::Vector2f(0, 0);
@@ -50,13 +53,20 @@ void Player::update()
 	if (right)
 		movement.x -= 0.05f;
 	rect.move(movement);
+	position = rect.getPosition();
 }
 void Player::setPosition(float x, float y) 
 {
 	position = sf::Vector2f(x, y);
 	rect.setPosition(position);
 }
-sf::Vector2f Player::getPosition() const
+void Player::getPosition() const
 {
-	return position;
+	std::cout << std::fixed << std::setprecision(3) 
+		<< "Player Position (x: " + std::to_string(position.x) + ", y:" 
+		+ std::to_string(position.y) + ")" << std::endl;
+}
+sf::FloatRect Player::getBoundBox() const
+{
+	return rect.getGlobalBounds();
 }
