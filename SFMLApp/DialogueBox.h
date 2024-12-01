@@ -4,8 +4,8 @@
 class DialogueBox
 {
 public:
-    DialogueBox();
-    void init(const std::string& fontFile, const std::string& text, const sf::Vector2f& size, const sf::Vector2f& position);
+    DialogueBox(sf::Font fontFile, std::vector<std::string> text, const sf::Vector2f& size, const sf::Vector2f& position);
+    void init(sf::Font fontFile, std::vector<std::string> text, const sf::Vector2f& size, const sf::Vector2f& position);
     bool iterThruText();
     void setPosition(const sf::Vector2f& position);
     sf::Vector2f getSize() const;
@@ -17,6 +17,6 @@ private:
     sf::Font font; // Store the font as a member
 
     //samples lines
-    std::vector<std::string> lines = { "Look mom, I'm a cat!", "I'm a cat, mom!", "Meow!", "Feed Me!" };
-    std::vector<std::string>::iterator lineIter = lines.begin();
+    std::vector<std::string> lines;
+    std::vector<std::string>::iterator lineIter;
 };
