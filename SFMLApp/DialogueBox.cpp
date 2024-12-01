@@ -2,17 +2,13 @@
 #include "DialogueBox.h"
 #include <iostream>
 
-DialogueBox::DialogueBox()
+DialogueBox::DialogueBox(sf::Font fontFile, std::vector<std::string> text, const sf::Vector2f& size, const sf::Vector2f& position)
 {
+    init(fontFile, text, size, position);
 }
 
-void DialogueBox::init(const std::string& fontFile, const std::string& text, const sf::Vector2f& size, const sf::Vector2f& position)
+void DialogueBox::init(sf::Font fontFile, std::vector<std::string> text, const sf::Vector2f& size, const sf::Vector2f& position)
 {
-
-
-    if (!font.loadFromFile(fontFile)) {
-        std::cerr << "Failed to load font" << std::endl;
-    }
 
     box.setSize(size);
     box.setFillColor(sf::Color::White);
@@ -21,16 +17,17 @@ void DialogueBox::init(const std::string& fontFile, const std::string& text, con
     box.setPosition(position);
 
     dialogueText.setFont(font);
-    dialogueText.setString(text);
+    this->lines = text;
     dialogueText.setCharacterSize(20);
     dialogueText.setFillColor(sf::Color::Black);
     dialogueText.setPosition(position.x + 20, position.y + 20);
+    this->lineIter = lines.begin();
 }
 
 //returns a bool to check if there are more lines to display
 bool DialogueBox::iterThruText()
 {
-    if (lineIter != lines.end())
+    if (lineIter != this->lines.end())
     {
         dialogueText.setString(*lineIter);
         lineIter++;

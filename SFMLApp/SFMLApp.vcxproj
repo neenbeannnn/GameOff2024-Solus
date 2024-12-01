@@ -135,22 +135,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Animations.cpp" />
+    <ClCompile Include="CatSprite.cpp" />
     <ClCompile Include="Collisions.cpp" />
     <ClCompile Include="DialogueBox.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HelperFunctions.cpp" />
     <ClCompile Include="KeyboardControl.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MapManager.cpp" />
     <ClCompile Include="NPC.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animations.h" />
+    <ClInclude Include="CatSprite.h" />
     <ClInclude Include="Collisions.h" />
     <ClInclude Include="DialogueBox.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="HelperFunctions.h" />
     <ClInclude Include="KeyboardControl.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="MapManager.h" />
     <ClInclude Include="NPC.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="resource.h" />
