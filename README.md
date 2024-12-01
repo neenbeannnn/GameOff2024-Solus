@@ -7,7 +7,7 @@ Our game is called Sonos - You are a cat trying to figure out where your owner h
 Our team has worked hard this month - learning SFML/Aesprite/Tiled for the first time! There has been lots of ups and downs but we are excited with all the progress we have made so far!
 --
 This is the **color scheme** we used: 
-
+![GameOff2024](SFMLApp/images/color_palette.png)
 ---
 **Tilemaps**
 
