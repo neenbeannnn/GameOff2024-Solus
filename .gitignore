@@ -32,3 +32,9 @@
 *.app
 
 .vs/
+
+#log, idb, and pdb files
+*.tlog/
+*.log
+*.idb
+*.pdb
