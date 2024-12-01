@@ -43,4 +43,4 @@ Story Team: Kani & Arvin (and later Richie!) :>
 
 Coding Team: Raph & Jasmine (and later Nina!)
 
-Art Team: Thais + Arvin + Nina (the best designers we could ever ask for)
+Art Team: Thais + Arvin + Kani + Nina (the best designers we could ever ask for)
