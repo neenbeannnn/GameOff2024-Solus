@@ -31,7 +31,7 @@ The **full story (note: spoilers)** is [here](https://docs.google.com/document/d
 
 Project Leads: Nina & Arvin (woot woot)
 
-Story Team: Kani & Arvin :>
+Story Team: Kani & Arvin (and later Richie!) :>
 
 Coding Team: Raph & Jasmine (and later Nina!)
 
