@@ -85,7 +85,7 @@ int main()
         60, 60, 60, 60, 50, 51, 51, 44, 44, 45, 60, 60, 60, 60, 60,
         60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60
     };
-
+    
     const std::vector<int> apartmentBathroomCollisions =
     {
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
@@ -98,6 +98,30 @@ int main()
         1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1,
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+    };
+
+    const std::vector<int> apartmentBathroomInteractables =
+    {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 119, 120, 121, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 129, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 85, 86, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 81, 82, 83, 84, 0, 0, 0, 0, 94, 95, 0, 0, 132, 133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 90, 91, 92, 93, 0, 0, 0, 0, 103, 104, 0, 0, 141, 142, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 87, 88, 99, 100, 101, 102, 0, 0, 0, 0, 112, 113, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 96, 97, 98, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 105, 106, 107, 0, 0, 0, 0, 108, 109, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 114, 115, 116, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 123, 124, 125, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
     };
 
     const std::vector<int> apartmentLeftRoom =
@@ -136,7 +160,10 @@ int main()
 
     //Create all Map objects
     std::string aptTilsetPath = "tilemaps/APT_TILEMAP.png";
-    auto apartmentFirstFloorMap = std::make_shared<Map>(make_pair(370.0f, 1000.0f), aptTilsetPath, 32, 15, 10, apartmentFirstFloor, apartmentFirstFloorCollisions);
+    std::string kitchenTilsetPath = "tilemaps/KITCHEN_TILEMAP.png";
+    std::string livingRoomTilsetPath = "tilemaps/LIVING_ROOM_TILEMAP.png";
+    std::vector<std::string> firstFloorDecorTilesetPaths = { kitchenTilsetPath, livingRoomTilsetPath };
+    auto apartmentFirstFloorMap = std::make_shared<Map>(make_pair(370.0f, 1000.0f), aptTilsetPath, 32, 15, 10, apartmentFirstFloor, apartmentFirstFloorCollisions, firstFloorDecorTilesetPaths);
     auto apartmentSecondFloorMap = std::make_shared<Map>(make_pair(800.0f, 1000.0f), aptTilsetPath, 32, 15, 10, apartmentSecondFloor, apartmentSecondFloorCollisions);
     auto apartmentBathroomMap = std::make_shared<Map>(make_pair(1130.0f, 900.0f), aptTilsetPath, 32, 15, 10, apartmentBathroom, apartmentBathroomCollisions);
     auto apartmentLeftRoomMap = std::make_shared<Map>(make_pair(600.0f, 870.0f), aptTilsetPath, 32, 15, 10, apartmentLeftRoom, apartmentLeftRoomCollisions);
@@ -144,8 +171,8 @@ int main()
     //Insert all Map objects in MapManager
     mapManager->addMap(MapName::APARTMENT_FIRST_FLOOR, apartmentFirstFloorMap);
     mapManager->addMap(MapName::APARTMENT_LEFT_ROOM, apartmentLeftRoomMap);
-    mapManager->addMap(MapName::APARTMENT_SECOND_FLOOR, apartmentSecondFloorMap);
     mapManager->addMap(MapName::APARTMENT_BATHROOM, apartmentBathroomMap);
+    mapManager->addMap(MapName::APARTMENT_SECOND_FLOOR, apartmentSecondFloorMap);
     
     mapManager->getCurrentMap()->load();
     
@@ -200,7 +227,7 @@ int main()
     view.setCenter(sprite.getPosition());
     window.setView(view);
 
-    const float movementSpeed = 0.1f; // Movement speed
+    const float movementSpeed = 0.05f; // Movement speed
 
     sf::Clock clock; //For the Animations
     sf::Clock idleClock; //Clock to track time idel
@@ -264,9 +291,9 @@ int main()
                 sprite.move(movement);
             }
 
-            sf::RectangleShape debugCollisionBox(sf::Vector2f(32, 32));
+            /*sf::RectangleShape debugCollisionBox(sf::Vector2f(16, 16));
             debugCollisionBox.setPosition(newPosition.x, newPosition.y);
-            debugCollisionBox.setFillColor(sf::Color(255, 0, 0, 100)); // Semi-transparent red
+            debugCollisionBox.setFillColor(sf::Color(255, 0, 0, 100));*/ // Semi-transparent red
             //window.draw(debugCollisionBox);
         }
 

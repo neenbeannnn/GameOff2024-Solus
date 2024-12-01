@@ -13,11 +13,19 @@
 using namespace std;
 class Map
 {
-//TODO: Add - Door doors, Interactables interactables
 public:
 	//Constructor for Map
 	//TODO implement bool canGoOut
-	Map(pair<float, float> spawnPoints, std::string tileset, int tileSize, int mapWidth, int mapHeight, const std::vector<int> tiles, const std::vector<int>& collisions, bool canMoveOut = true);
+	Map(
+		pair<float, float> spawnPoints, 
+		std::string tileset, int tileSize, 
+		int mapWidth, int mapHeight, 
+		const std::vector<int> tiles, 
+		const std::vector<int>& collisions, 
+		bool canMoveOut = true, 
+		std::vector<std::string> decorTileSet = {}, 
+		int decorTileSize = 16
+	);
 
 	//Get the Spawn Points
 	sf::Vector2f getSpawnPoints() { return this->spawnPoints; }
@@ -48,6 +56,8 @@ private:
 	Collisions *collisionHandler;
 	const float scale = 4.0f;
 	bool canGoOut;
+	std::vector<std::string> decorTileSet;
+	sf::Vector2u decorTileSize;
 };
 
 #endif
