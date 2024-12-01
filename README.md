@@ -1,4 +1,4 @@
-GameOff2024: Theme Secrets
+GameOff2024: Sonos!
 ---
 Our game is called Sonos - You are a cat trying to figure out where your owner has gone...
 
@@ -12,17 +12,25 @@ This is the **color scheme** we used:
 **Tilemaps**
 
 ![GameOff2024](SFMLApp/images/apartment_first_floor.png)
-![GameOff2024](SFMLApp/images/apartment_second_floor.png)
+![GameOff2024](SFMLApp/images/second-floor-decor.png)
 ![GameOff2024](SFMLApp/images/Bedroom.png)
-![GameOff2024](SFMLApp/images/Bathroom.png)
+![GameOff2024](SFMLApp/images/bathroom-decor.png)
 ![GameOff2024](SFMLApp/images/SecretRoom.png)
 ![GameOff2024](SFMLApp/images/whole_town.png)
+![GameOff2024](SFMLApp/images/forest-maze.png)
+![GameOff2024](SFMLApp/images/last-stage.png)
 ---
 **Sprites**
 
 ![GameOff2024](SFMLApp/images/CatSprite.png)
 ![GameOff2024](SFMLApp/images/DogSprite.png)
+![GameOff2024](SFMLApp/images/crow.png)
 ![GameOff2024](SFMLApp/images/NPCs.png)
+---
+**Decor (to be added later TT)**
+
+![GameOff2024](SFMLApp/images/kitchen.png)
+![GameOff2024](SFMLApp/images/living-room.png)
 ---
 The **full story (note: spoilers)** is [here](https://docs.google.com/document/d/12i3UPvNjBSSTMyAO7gYfmXxgDe7n4tVte96JigjizPM/edit?usp=sharing), as written by our amazing Story Team! 
 
