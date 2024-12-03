@@ -1,6 +1,6 @@
-GameOff2024: Sonos!
+GameOff2024: Solus!
 ---
-Our game is called Sonos - You are a cat trying to figure out where your owner has gone...
+Our game is called Solus - You are a cat trying to figure out where your owner has gone...
 
 ![GameOff2024](SFMLApp/images/Main_Menu.png)
 ---
