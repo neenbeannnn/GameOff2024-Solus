@@ -8,8 +8,8 @@ Map::Map(
 	int mapHeight,
 	const std::vector<int> tiles,
 	const std::vector<int>& collisions, 
-	bool canMoveOut,
 	std::vector<std::string> decorTileSet,
+	bool canMoveOut,
 	int decorTileSize
 	) {
 		this->spawnPoints = sf::Vector2f(spawnPoints.first, spawnPoints.second);

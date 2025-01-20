@@ -1,7 +1,6 @@
 #include "Game.h"
 
 Game::Game()
-    : window(sf::VideoMode(800, 600), "SFML Game"), dt(sf::seconds(1.f / 60.f))
 {
 }
 

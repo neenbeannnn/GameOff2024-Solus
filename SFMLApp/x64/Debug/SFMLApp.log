@@ -1,4 +1,11 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (SFMLApp.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Animations.cpp
+  CatSprite.cpp
+  Collisions.cpp
+  DialogueBox.cpp
+  Game.cpp
+  HelperFunctions.cpp
+  KeyboardControl.cpp
   main.cpp
 C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,67): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
 C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,67): warning C4244:         with
@@ -173,50 +180,353 @@ C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(100,47): warning C4244: 'ar
   (compiling source file 'main.cpp')
   
 C:\Users\nina\source\repos\SFMLApp\SFMLApp\main.cpp(16,15): warning C4101: 'event': unreferenced local variable
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(403,61): error C2665: 'Map::Map': no overloaded function could convert all the argument types
-  (compiling source file 'main.cpp')
-      C:\Users\nina\source\repos\SFMLApp\SFMLApp\Map.h(19,2):
-      could be 'Map::Map(std::pair<float,float>,std::string,int,int,int,const std::vector<int,std::allocator<int>>,const std::vector<int,std::allocator<int>> &,bool,std::vector<std::string,std::allocator<std::string>>,int)'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(403,61):
-          'Map::Map(std::pair<float,float>,std::string,int,int,int,const std::vector<int,std::allocator<int>>,const std::vector<int,std::allocator<int>> &,bool,std::vector<std::string,std::allocator<std::string>>,int)': cannot convert argument 8 from 'std::vector<std::string,std::allocator<std::string>>' to 'bool'
-              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(403,82):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(403,61):
-      while trying to match the argument list '(_Ty, std::string, _Ty, _Ty, _Ty, const std::vector<int,std::allocator<int>>, const std::vector<int,std::allocator<int>>, std::vector<std::string,std::allocator<std::string>>, _Ty)'
-          with
-          [
-              _Ty=std::pair<float,float>
-          ]
-          and
-          [
-              _Ty=int
-          ]
-          and
-          [
-              _Ty=int
-          ]
-          and
-          [
-              _Ty=int
-          ]
-          and
-          [
-              _Ty=int
-          ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(403,61):
-      the template instantiation context (the oldest one first) is
-          C:\Users\nina\source\repos\SFMLApp\SFMLApp\main.cpp(166,40):
-          see reference to function template instantiation 'std::shared_ptr<Map> std::make_shared<Map,std::pair<float,float>,std::string&,int,int,int,const std::vector<int,std::allocator<int>>&,const std::vector<int,std::allocator<int>>&,std::vector<std::string,std::allocator<std::string>>&,int>(std::pair<float,float> &&,std::string &,int &&,int &&,int &&,const std::vector<int,std::allocator<int>> &,const std::vector<int,std::allocator<int>> &,std::vector<std::string,std::allocator<std::string>> &,int &&)' being compiled
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(2906,46):
-          see reference to function template instantiation 'std::_Ref_count_obj2<Map>::_Ref_count_obj2<_Ty,std::string&,int,int,int,const std::vector<int,std::allocator<int>>&,const std::vector<int,std::allocator<int>>&,std::vector<std::string,std::allocator<std::string>>&,int>(_Ty &&,std::string &,int &&,int &&,int &&,const std::vector<int,std::allocator<int>> &,const std::vector<int,std::allocator<int>> &,std::vector<std::string,std::allocator<std::string>> &,int &&)' being compiled
-          with
-          [
-              _Ty=std::pair<float,float>
-          ]
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(2095,18):
-          see reference to function template instantiation 'void std::_Construct_in_place<_Ty,std::pair<float,float>,std::string&,int,int,int,const std::vector<int,std::allocator<int>>&,const std::vector<int,std::allocator<int>>&,std::vector<std::string,std::allocator<std::string>>&,int>(_Ty &,std::pair<float,float> &&,std::string &,int &&,int &&,int &&,const std::vector<int,std::allocator<int>> &,const std::vector<int,std::allocator<int>> &,std::vector<std::string,std::allocator<std::string>> &,int &&) noexcept(false)' being compiled
-          with
-          [
-              _Ty=Map
-          ]
+  Map.cpp
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,67): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,67): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,67): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,67): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,67): warning C4244:         ]
+  (compiling source file 'Map.cpp')
   
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,51): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,51): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,51): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,51): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,51): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,73): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,73): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,73): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,73): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,73): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,57): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,57): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,57): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,57): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,57): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,79): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,79): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,79): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,79): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,79): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,57): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,57): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,57): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,57): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,57): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,73): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,73): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,73): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,73): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,73): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,51): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,51): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,51): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,51): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,51): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244: 'argument': conversion from 'const T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244: 'argument': conversion from 'const T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244:         ]
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(100,65): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+  (compiling source file 'Map.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(100,47): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+  (compiling source file 'Map.cpp')
+  
+  MapManager.cpp
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,67): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,67): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,67): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,67): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,67): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,51): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,51): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,51): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,51): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(40,51): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,73): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,73): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,73): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,73): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,73): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,57): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,57): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,57): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,57): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(41,57): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,79): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,79): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,79): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,79): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,79): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,57): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,57): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,57): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,57): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(42,57): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,73): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,73): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,73): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,73): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,73): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,51): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,51): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,51): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,51): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(43,51): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,70): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(46,53): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,76): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(47,59): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,82): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(48,59): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,76): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(49,53): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244: 'argument': conversion from 'const T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,81): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244: 'argument': conversion from 'const T' to 'T', possible loss of data
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244:         with
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244:             T=unsigned int
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244:         ]
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244:         and
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244:         [
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244:             T=float
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(91,67): warning C4244:         ]
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(100,65): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+  (compiling source file 'MapManager.cpp')
+  
+C:\Users\nina\source\repos\SFMLApp\SFMLApp\TileMap.h(100,47): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+  (compiling source file 'MapManager.cpp')
+  
+  NPC.cpp
+  Player.cpp
+  Generating Code...
+  SFMLApp.vcxproj -> C:\Users\nina\source\repos\SFMLApp\x64\Debug\GameOff2024.exe
