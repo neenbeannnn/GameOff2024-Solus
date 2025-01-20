@@ -16,7 +16,7 @@ int main()
     sf::Event event;
 
     view.setSize(sf::Vector2f(1000, 800));
-    
+
     const std::vector<int> apartmentFirstFloor =
     {
         60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60,
@@ -32,7 +32,7 @@ int main()
 
     };
 
-    const std::vector<int> apartmentFirstFloorCollisions = 
+    const std::vector<int> apartmentFirstFloorCollisions =
     {
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
@@ -85,7 +85,7 @@ int main()
         60, 60, 60, 60, 50, 51, 51, 44, 44, 45, 60, 60, 60, 60, 60,
         60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60
     };
-    
+
     const std::vector<int> apartmentBathroomCollisions =
     {
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
@@ -163,24 +163,24 @@ int main()
     std::string kitchenTilsetPath = "tilemaps/KITCHEN_TILEMAP.png";
     std::string livingRoomTilsetPath = "tilemaps/LIVING_ROOM_TILEMAP.png";
     std::vector<std::string> firstFloorDecorTilesetPaths = { kitchenTilsetPath, livingRoomTilsetPath };
-    auto apartmentFirstFloorMap = std::make_shared<Map>(make_pair(370.0f, 1000.0f), aptTilsetPath, 32, 15, 10, apartmentFirstFloor, apartmentFirstFloorCollisions, firstFloorDecorTilesetPaths, 16);
-    auto apartmentSecondFloorMap = std::make_shared<Map>(make_pair(800.0f, 1000.0f), aptTilsetPath, 32, 15, 10, apartmentSecondFloor, apartmentSecondFloorCollisions, firstFloorDecorTilesetPaths, 16);
-    auto apartmentBathroomMap = std::make_shared<Map>(make_pair(1130.0f, 900.0f), aptTilsetPath, 32, 15, 10, apartmentBathroom, apartmentBathroomCollisions, firstFloorDecorTilesetPaths, 16);
-    auto apartmentLeftRoomMap = std::make_shared<Map>(make_pair(600.0f, 870.0f), aptTilsetPath, 32, 15, 10, apartmentLeftRoom, apartmentLeftRoomCollisions, firstFloorDecorTilesetPaths, 16);
-    
+    auto apartmentFirstFloorMap = std::make_shared<Map>(make_pair(370.0f, 1000.0f), aptTilsetPath, 32, 15, 10, apartmentFirstFloor, apartmentFirstFloorCollisions, firstFloorDecorTilesetPaths, true, 16);
+    auto apartmentSecondFloorMap = std::make_shared<Map>(make_pair(800.0f, 1000.0f), aptTilsetPath, 32, 15, 10, apartmentSecondFloor, apartmentSecondFloorCollisions, firstFloorDecorTilesetPaths, true, 16);
+    auto apartmentBathroomMap = std::make_shared<Map>(make_pair(1130.0f, 900.0f), aptTilsetPath, 32, 15, 10, apartmentBathroom, apartmentBathroomCollisions, firstFloorDecorTilesetPaths, true, 16);
+    auto apartmentLeftRoomMap = std::make_shared<Map>(make_pair(600.0f, 870.0f), aptTilsetPath, 32, 15, 10, apartmentLeftRoom, apartmentLeftRoomCollisions, firstFloorDecorTilesetPaths, true, 16);
+
     //Insert all Map objects in MapManager
     mapManager->addMap(MapName::APARTMENT_FIRST_FLOOR, apartmentFirstFloorMap);
     mapManager->addMap(MapName::APARTMENT_LEFT_ROOM, apartmentLeftRoomMap);
     mapManager->addMap(MapName::APARTMENT_BATHROOM, apartmentBathroomMap);
     mapManager->addMap(MapName::APARTMENT_SECOND_FLOOR, apartmentSecondFloorMap);
-    
+
     mapManager->getCurrentMap()->load();
-    
+
     //Create Cat Sprite
     CatSprite* catSprite = new CatSprite();
     catTexture.loadFromFile("sprites/CatSprite_Sitting.png");
     auto animation = std::make_shared<Animations>(catTexture, sf::Vector2u(4, 4), 0.4f);
-    
+
     catTextureLeft.loadFromFile("sprites/CatSprite_Left.png");
     auto animationLeft = std::make_shared<Animations>(catTextureLeft, sf::Vector2u(7, 7), 0.4f);
 
@@ -223,7 +223,7 @@ int main()
 
     bool showDialogue = false; // Flag to toggle dialogue box visibility
 
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Solus");
 
     view.setCenter(sprite.getPosition());
     window.setView(view);
@@ -324,7 +324,7 @@ int main()
         if (showDialogue) {
             dialogueBox.draw(window); // Draw the dialogue box
         }
-        
+
         window.draw(sprite);
         window.display();
     }

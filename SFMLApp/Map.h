@@ -16,15 +16,16 @@ class Map
 public:
 	//Constructor for Map
 	//TODO implement bool canGoOut
+
 	Map(
 		pair<float, float> spawnPoints, 
 		std::string tileset, int tileSize, 
 		int mapWidth, int mapHeight, 
 		const std::vector<int> tiles, 
 		const std::vector<int>& collisions, 
-		bool canMoveOut = true, 
-		std::vector<std::string> decorTileSet = {}, 
-		int decorTileSize = 16
+		std::vector<std::string> decorTileSet = {}, //still have to specify this
+		bool canMoveOut = true, //still have to specify this
+		int decorTileSize = 16 //still have to specify this
 	);
 
 	//Get the Spawn Points
